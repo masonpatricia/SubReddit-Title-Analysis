@@ -1,4 +1,4 @@
-# Project 3: Reddit Post Analysis
+# Reddit Post Analysis
 
 
 ## Problem Statement:
@@ -9,11 +9,11 @@ The PRAW (Python Reddit API Wrapper) allows access to Reddits API for web scrapi
 To prepare the data for analysis, Natural Language Processing (NLP) was used to strip the titles of all digits and punctuation.  They were then placed in a Lemmatizer [link]( https://stackoverflow.com/questions/47423854/sklearn-adding-lemmatizer-to-countvectorizer), split into training and testing data, and vectorized using CountVectorizer, removing stop words that would have diluted the analysis.  The data was then fit and transformed.
 Analysis of word counts, bigrams, and trigrams were performed on the data (as shown).
 
-![Top15Words](Top_15_words.png)
+![Top15Words](top_15_words.png)
 
-![Top15Bigrams](Top15_bigrams.png)
+![Top15Bigrams](top15_bigrams.png)
 
-![Top15Trigrams](Top15_trigrams.png)
+![Top15Trigrams](top15_trigrams.png)
 
 
 Four models were used to analyze the titles: Naïve Bayes, Logistic Regression, Random Forest Classifier and Extra Trees Classifer.  Naïve Bayes and Extra Trees Classifier used default parameters.  Logistic Regression utilized a regularization of C =100 or alpha = .01.  Random Forest Classifer was combined with a gridsearch find the optimal parameters of max_depth = None and n_estimators = 200. 
